@@ -50,7 +50,6 @@ function images() {
 
 function scripts() {
     return src([
-        'node_modules/mixitup/dist/mixitup.js',
         'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))
