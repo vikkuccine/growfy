@@ -12,3 +12,77 @@ html,
 body {
 	height: 100%;
 }
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.2;
+	overflow-x: hidden;
+	color: $primary;
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
+
+ul[class],
+ol[class] {
+	padding: 0;
+}
+
+ul[class] {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	background-color: #000000;
+	// position: relative;
+	// overflow-x: hidden;
+}
+
+.main {
+	flex: 1 0 auto;
+}
+
+.footer {
+	flex: 0 0 auto;
+}
+
+.btn {
+	all: unset;
+	box-sizing: border-box;
+	color: $titles;
+	background-color: #3D96F4;
+	border-radius: 50px;
+	padding: 16px 29px;
+	cursor: pointer;
+	width: 160px;
+	text-align: center;
+
+	&:hover {
+		background-color: #0B63C0;
+		transition: 0.5s ease-in-out;
+	}
+
+	&--dark {
+		background: rgba(129, 129, 139, 0.20);
+	}
+}
+
+.title {
+	@extend %titles;
+}
