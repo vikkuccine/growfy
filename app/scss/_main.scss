@@ -357,6 +357,7 @@
 
 .services {
 
+
     &__inner {
         display: flex;
         gap: 104px;
@@ -393,7 +394,7 @@
 
 
     &__row-first {
-        margin-top: 48px;
+        margin-top: 100px;
     }
 
     &__item {
@@ -411,18 +412,18 @@
     }
 
     &__subtitle {
-        margin: 0 0 5px 0;
+        margin: 0 0 10px 0;
         color: #FFF;
         font-size: 19.2px;
         font-weight: 400;
-
+        line-height: 26px;
     }
 
     &__text {
         margin: 0;
+        line-height: 24px;
     }
 
     &__row-second {
-
     }
 }
