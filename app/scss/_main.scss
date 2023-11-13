@@ -402,7 +402,7 @@
         background: rgba(129, 129, 139, 0.10);
         padding: 55px 25px 61px;
 
-        & + & {
+        &+& {
             margin-top: 32px;
         }
     }
@@ -424,6 +424,112 @@
         line-height: 24px;
     }
 
-    &__row-second {
+    &__row-second {}
+}
+
+.advantages {
+
+    &__inner {
+        display: flex;
+        gap: 64px;
+        position: relative;
+    }
+
+    &__photo {
+        position: relative;
+    }
+
+    &__photo-wrap {
+        display: flex;
+    }
+
+    &__img-bg {}
+
+    &__image-bg {
+        max-width: 423px;
+        height: 785px;
+        object-fit: cover;
+        border-radius: 0 738px 430px 430px;
+        transition: border-radius 0.5s ease;
+
+        &--animated {
+            border-radius: 738px 0 430px 430px;
+        }
+    }
+
+    &__img {
+        align-self: flex-end;
+    }
+
+    &__image-sm {
+        max-width: 181px;
+        height: 181px;
+        object-fit: cover;
+        border-radius: 181px 181px 0px 181px;
+        transition: border-radius 0.5s ease;
+
+        &--animated {
+            border-radius: 181px 181px 181px 0px;
+        }
+    }
+
+
+    &__dots {
+        position: absolute;
+        top: 190px;
+        right: 535px;
+    }
+
+    &__info {
+        margin: auto 0;
+    }
+
+    &__btn-transparant {
+        margin-bottom: 43px;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        margin: 0 0 29px 0;
+        font-size: 18px;
+    }
+
+    &__items {}
+
+}
+
+.advantages-list {
+
+    &__item {
+        margin-bottom: 20px;
+        position: relative;
+        display: flex;
+
+        &::after {
+            content: '';
+            background-image: url(../images/chek.svg);
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            bottom: 8px;
+            left: 8px;
+        }
+    }
+
+    &__dot {
+        background-color: rgba(129, 129, 139, 0.10);
+        width: 32px;
+        height: 32px;
+        border-radius: 32px;
+        margin-right: 10px;
+
+    }
+
+    &__text {
+        margin: 0;
+        align-self: center;
     }
 }
