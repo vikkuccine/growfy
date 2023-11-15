@@ -39,6 +39,7 @@ class ParallaxScroll {
     photoScroll() {
         const bgImage = document.querySelector('.advantages__image-bg')
         const image = document.querySelector('.advantages__image-sm')
+        const expertImg = document.querySelector('.expert__img')
         const options = {
             root: null,
             rootMargin: '0px',
@@ -54,12 +55,7 @@ class ParallaxScroll {
                     entry.target.classList.add("advantages__image-bg--animated");
                 }
             });
-
-
         }, options);
-
-
-
 
         const observerSmallImg = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -69,8 +65,18 @@ class ParallaxScroll {
             });
         }, options);
 
+        const observerExpertImg = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("expert__img--animated");
+                }
+            });
+        }, options);
+        
+
         observerBigImg.observe(bgImage);
         observerSmallImg.observe(image);
+        observerExpertImg.observe(expertImg);
     };
 
 }
