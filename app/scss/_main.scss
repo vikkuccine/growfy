@@ -25,6 +25,17 @@
 
     }
 
+    &__item {
+        padding: 8px;
+
+        &:hover {
+            background-color: #1c96e8;
+            padding: 8px;
+            border-radius: 25px 0 25px 0;
+            transition: .5s;
+        }
+    }
+
     &__item:last-child {
         border-radius: 29.938px;
         background: rgba(129, 129, 139, 0.30);
@@ -786,7 +797,7 @@
 
 
 .footer {
-padding-bottom: 0;
+    padding-bottom: 0;
 
     &__inner {}
 
@@ -843,6 +854,76 @@ padding-bottom: 0;
     }
 }
 
+.icon-linkedin {
+
+    &:hover {
+        color: #3D96F4;
+        transition: .5s;
+        border: 1px solid #3D96F4;
+    }
+
+    &__svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.icon-twitter {
+
+    &:hover {
+        color: #1c96e8;
+        border: 1px solid #1c96e8;
+        transition: .5s;
+    }
+
+    &__svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.icon-facebook {
+
+    &:hover {
+        color: #4867aa;
+        border: 1px solid #4867aa;
+        transition: .5s;
+    }
+
+    &__svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.icon-youtube {
+
+    &:hover {
+        color: #ff0000;
+        border: 1px solid #ff0000;
+        transition: .5s;
+    }
+
+    &__svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.icon-instagram {
+
+    &:hover {
+        color: #c134a8;
+        border: 1px solid #c134a8;
+        transition: .5s;
+    }
+
+    &__svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
 .second-column {
 
     &__subtitle {
@@ -857,10 +938,28 @@ padding-bottom: 0;
         display: flex;
         flex-direction: column;
         gap: 24px;
+        align-items: flex-start;
     }
 
     &__item {
         cursor: pointer;
+        position: relative;
+
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: #FF6D35;
+            height: 2px;
+            width: 0;
+            left: 0;
+            bottom: -8px;
+            transition: .3s;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
     }
 }
 
@@ -878,10 +977,28 @@ padding-bottom: 0;
         display: flex;
         flex-direction: column;
         gap: 24px;
+        align-items: flex-start;
     }
 
     &__item {
         cursor: pointer;
+        position: relative;
+
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: #FF6D35;
+            height: 2px;
+            width: 0;
+            left: 0;
+            bottom: -8px;
+            transition: .3s;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
     }
 }
 
