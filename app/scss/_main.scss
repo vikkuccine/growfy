@@ -545,24 +545,25 @@
 }
 
 .expert {
-    margin: 32px 0;
 
     &__inner {
         display: flex;
         gap: 32px;
+        justify-content: space-between;
     }
 
     &__list {
         margin: 0;
         display: grid;
         grid-template-columns: repeat(2, 2fr);
-        gap: 32px;
+        gap: 32px;   
     }
 
     &__item {
         padding: 40px;
         border-radius: 30px;
-        background: rgba(129, 129, 139, 0.10);
+        background: #0d0d0e;
+        transition: 1.5s;
     }
 
     &__title {
@@ -590,11 +591,44 @@
     }
 }
 
+
+
+.second-card {
+    transform: translateX(calc(-100% - 32px));
+
+    &--animated {
+        transform: translate(0);
+    }
+}
+
+.third-card {
+    transform: translateY(calc(-100% - 32px));
+
+    &--animated {
+        transform: translate(0);
+    }
+}
+
+.fourth-card {
+    transform: translate(calc(-100% - 32px), calc(-100% - 32px));
+
+    &--animated {
+        transform: translate(0);
+    }
+}
+
 .comments {
 
     &__info {}
 
-    &__items {}
+    &__items {
+        opacity: 0;
+        transition: 2s;
+
+        &--animated {
+            opacity: 1;
+        }
+    }
 }
 
 .comments-list {
@@ -609,6 +643,11 @@
         display: flex;
         flex-direction: column;
         min-height: 100%;
+        transition: .5s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 
     &__cart {
@@ -657,6 +696,14 @@
         margin-bottom: 64px;
         display: flex;
         justify-content: space-between;
+        opacity: 0;
+        transition: 2s;
+        transform: translateY(50px);
+
+        &--animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     &__inner {}
@@ -686,13 +733,21 @@
 
     &__title {}
 
-    &__items {}
+    &__items {
+        opacity: 0;
+        transition: 2s;
+
+        &--animated {
+            opacity: 1;
+        }
+    }
 }
 
 .blog-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 48px;
+    margin: 0;
 
     &__item {
         border-radius: 24px;

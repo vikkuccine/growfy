@@ -40,17 +40,34 @@ class ParallaxScroll {
         const bgImage = document.querySelector('.advantages__image-bg')
         const image = document.querySelector('.advantages__image-sm')
         const expertImg = document.querySelector('.expert__img')
+        const expertItemSecond = document.querySelector('.second-card')
+        const expertItemThird = document.querySelector('.third-card')
+        const expertItemFourth = document.querySelector('.fourth-card')
+        const titleBlock = document.querySelectorAll('.header-section__wrap')
+        const commentsList = document.querySelector('.comments__items')
+        const blogList = document.querySelector('.blog__items')
+
         const options = {
             root: null,
             rootMargin: '0px',
             threshold: 1
         }
 
+        const optionsItem = {
+            root: null,
+            rootMargin: '0px 0px -200px 0px',
+            threshold: 1
+        }
+
+        const optionsBlok = {
+            root: null,
+            rootMargin: '0px 0px 0px 0px',
+            threshold: 0.5
+        }
+
 
         const observerBigImg = new IntersectionObserver((entries) => {
-
             entries.forEach(entry => {
-
                 if (entry.isIntersecting) {
                     entry.target.classList.add("advantages__image-bg--animated");
                 }
@@ -72,11 +89,67 @@ class ParallaxScroll {
                 }
             });
         }, options);
-        
+
+
+        const observerExpertSecondItem = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("second-card--animated");
+                }
+            });
+        }, optionsItem);
+
+        const observerExpertThirdItem = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("third-card--animated");
+                }
+            });
+        }, optionsItem);
+
+        const observerExpertFouthItem = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("fourth-card--animated");
+                }
+            });
+        }, optionsItem);
+
+        const observerTitleContainer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("header-section__wrap--animated");
+                }
+            });
+        }, options);
+
+        const observerCommentsList = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("comments__items--animated");
+                }
+            });
+        }, optionsBlok);
+
+        const observerblogList = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("blog__items--animated");
+                }
+            });
+        }, optionsBlok);
 
         observerBigImg.observe(bgImage);
         observerSmallImg.observe(image);
         observerExpertImg.observe(expertImg);
+        observerExpertSecondItem.observe(expertItemSecond);
+        observerExpertThirdItem.observe(expertItemThird);
+        observerExpertFouthItem.observe(expertItemFourth)
+        titleBlock.forEach(element => {
+            observerTitleContainer.observe(element)
+        });
+        observerCommentsList.observe(commentsList)
+        observerblogList.observe(blogList)
     };
 
 }
