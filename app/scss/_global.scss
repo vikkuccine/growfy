@@ -46,8 +46,8 @@ a {
 }
 
 .container-padding {
-	padding-top: 90px;
-	padding-bottom: 90px;
+	padding-top: 80px;
+	padding-bottom: 80px;
 }
 
 .wrapper {
@@ -73,9 +73,10 @@ a {
 	color: $titles;
 	background-color: #3D96F4;
 	border-radius: 50px;
+	font-size: 14px;
 	padding: 16px 29px;
 	cursor: pointer;
-	width: 160px;
+	display: inline-block;
 	text-align: center;
 
 	&:hover {
@@ -102,5 +103,9 @@ a {
 }
 
 .title {
-	@extend %titles;
+	color: #FFF;
+    font-family: Poppins;
+    font-size: 51.2px;
+    font-weight: 500;
+    margin: 0;
 }

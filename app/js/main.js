@@ -154,5 +154,23 @@ class ParallaxScroll {
 
 }
 
+class BurgerMenu {
+    constructor() {
+      this.menuBtn = document.querySelector('.burger-menu');
+      this.menu = document.querySelector('.menu');
+      this.body = document.querySelector('body')
+      this.openBurgerMenu()
+    }
+  
+    openBurgerMenu() {
+      this.menuBtn.addEventListener('click', () => {
+        this.menuBtn.classList.toggle('burger-menu--open');
+        this.menu.classList.toggle('menu--open');
+        this.body.classList.toggle('overflow-hidden');
+      })
+    }
+  }
+
+const burgerMenu = new BurgerMenu();
 const slider = new Slider();
 const parallaxScroll = new ParallaxScroll();
