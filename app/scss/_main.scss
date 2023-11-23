@@ -464,17 +464,20 @@
 
     &__photo {
         position: relative;
+        align-self: center;
     }
 
     &__photo-wrap {
         display: flex;
     }
 
-    &__img-bg {}
+    &__img-bg {
+        flex: 1 0 71%;
+    }
 
     &__image-bg {
-        max-width: 423px;
-        height: 785px;
+        width: 100%;
+        aspect-ratio: 0.53;
         object-fit: cover;
         border-radius: 0 738px 430px 430px;
         transition: border-radius 0.5s ease;
@@ -489,8 +492,8 @@
     }
 
     &__image-sm {
-        max-width: 181px;
-        height: 181px;
+        width: 100%;
+        aspect-ratio: 1;
         object-fit: cover;
         border-radius: 181px 181px 0px 181px;
         transition: border-radius 0.5s ease;
@@ -513,6 +516,7 @@
 
     &__info {
         margin: auto 0;
+        flex: 1 0 47%;
     }
 
     &__btn-transparant {
@@ -539,15 +543,7 @@
         position: relative;
         display: flex;
 
-        &::after {
-            content: '';
-            background-image: url(../images/chek.svg);
-            width: 16px;
-            height: 16px;
-            position: absolute;
-            bottom: 8px;
-            left: 8px;
-        }
+        
     }
 
     &__dot {
@@ -556,6 +552,18 @@
         height: 32px;
         border-radius: 32px;
         margin-right: 10px;
+        position: relative;
+
+        &::after {
+            content: '';
+            background-image: url(../images/chek.svg);
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 
     &__text {

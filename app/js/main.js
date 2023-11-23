@@ -30,8 +30,12 @@ class ParallaxScroll {
             let lenght = target.length;
 
             for (index; index < lenght; index++) {
-                let pos = window.scrollY * target[index].dataset.rate;
-                target[index].style.transform = 'translate3d(0px, ' + pos + 'px, 0px)'
+                if(window.innerWidth >= 650) {
+                    let pos = window.scrollY * target[index].dataset.rate;
+                    target[index].style.transform = 'translate3d(0px, ' + pos + 'px, 0px)'
+                } else {
+                    target[index].style.transform = 'translate3d(0px, 0px, 0px)'
+                }
             }
         })
     }
