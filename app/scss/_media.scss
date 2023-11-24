@@ -24,6 +24,19 @@
         align-self: center;
         max-width: 680px;
     }
+
+    .expert__photo {
+        display: none;
+    }
+
+    .expert__list {
+        max-width: 747px;
+        align-self: center;
+    }
+
+    .expert__inner {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 904px) {
@@ -136,6 +149,18 @@
     .header__logo {}
 }
 
+
+@media (max-width: 960px) {
+    .header-section__wrap {
+        flex-direction: column;
+    }
+
+    .header-section__btn {
+        align-self: self-start;
+    }
+}
+
+
 @media (max-width: 760px) {
     .container-padding {
         padding-top: 60px;
@@ -182,6 +207,49 @@
 
     .tabs__row-first {
         margin-top: 0;
+    }
+
+    .expert__title {
+        margin: 0 0 25px 0;
+    }
+
+    .expert__item {
+        padding: 28px;
+    }
+}
+
+@media (max-width: 560px) {
+    .expert__item {
+        max-width: 300px;
+    }
+
+    .expert__list {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .second-card {
+        transform: translateY(calc(-100% - 32px));
+
+        &--animated {
+            transform: translate(0);
+        }
+    }
+
+    .third-card {
+        transform: translateY(calc((-100% - 32px) * 2));
+
+        &--animated {
+            transform: translate(0);
+        }
+    }
+
+    .fourth-card {
+        transform: translateY(calc((-100% - 32px) * 3));
+
+        &--animated {
+            transform: translate(0);
+        }
     }
 }
 

@@ -604,11 +604,13 @@
         line-height: 27px;
     }
 
-    &__photo {}
+    &__photo {
+        width: 100%;
+    }
 
     &__img {
-        width: 500px;
-        height: 588px;
+        width: 100%;
+        aspect-ratio: .84;
         object-fit: cover;
         border-radius: 378px 0px 378px 378px;
         transition: border-radius 0.5s ease;
@@ -664,14 +666,16 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 48px;
 
+
     &__item {
         border-radius: 30px;
-        background: rgba(129, 129, 139, 0.10);
+        background: #232326;
         padding: 64px 40px 84px;
         display: flex;
         flex-direction: column;
         min-height: 100%;
         transition: .5s ease-in-out;
+
 
         &:hover {
             transform: scale(1.1);
