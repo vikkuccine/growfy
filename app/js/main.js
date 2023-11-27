@@ -4,7 +4,7 @@ class Slider {
     }
 
     initializeSwiper() {
-        const swiper = new Swiper('.swiper', {
+        const clientsSwiper = new Swiper('.clients__swiper', {
             slidesPerView: 'auto',
             loop: true,
             autoplay: {
@@ -13,8 +13,26 @@ class Slider {
             },
             speed: 5000,
         })
+        const commentsSwiper = new Swiper('.comments__swiper', {
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            loop: true,
+            breakpoints: {
+                1100: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    loop: true,
+                    autoplay: false,
+                    allowTouchMove: false
+                },
+            },
+            autoplay: {
+                delay: 1,
+                disableOnInteraction: false,
+            },
+            speed: 6000,
+        })
     }
-
 }
 
 class ParallaxScroll {
@@ -30,7 +48,7 @@ class ParallaxScroll {
             let lenght = target.length;
 
             for (index; index < lenght; index++) {
-                if(window.innerWidth >= 650) {
+                if (window.innerWidth >= 650) {
                     let pos = window.scrollY * target[index].dataset.rate;
                     target[index].style.transform = 'translate3d(0px, ' + pos + 'px, 0px)'
                 } else {
@@ -48,7 +66,7 @@ class ParallaxScroll {
         const expertItemThird = document.querySelector('.third-card')
         const expertItemFourth = document.querySelector('.fourth-card')
         const titleBlock = document.querySelectorAll('.header-section__wrap')
-        const commentsList = document.querySelector('.comments__items')
+        const commentsList = document.querySelector('.comments__swiper')
         const blogList = document.querySelector('.blog__items')
 
         const options = {
@@ -130,7 +148,7 @@ class ParallaxScroll {
         const observerCommentsList = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add("comments__items--animated");
+                    entry.target.classList.add("comments__swiper--animated");
                 }
             });
         }, optionsBlok);
@@ -160,20 +178,20 @@ class ParallaxScroll {
 
 class BurgerMenu {
     constructor() {
-      this.menuBtn = document.querySelector('.burger-menu');
-      this.menu = document.querySelector('.menu');
-      this.body = document.querySelector('body')
-      this.openBurgerMenu()
+        this.menuBtn = document.querySelector('.burger-menu');
+        this.menu = document.querySelector('.menu');
+        this.body = document.querySelector('body')
+        this.openBurgerMenu()
     }
-  
+
     openBurgerMenu() {
-      this.menuBtn.addEventListener('click', () => {
-        this.menuBtn.classList.toggle('burger-menu--open');
-        this.menu.classList.toggle('menu--open');
-        this.body.classList.toggle('overflow-hidden');
-      })
+        this.menuBtn.addEventListener('click', () => {
+            this.menuBtn.classList.toggle('burger-menu--open');
+            this.menu.classList.toggle('menu--open');
+            this.body.classList.toggle('overflow-hidden');
+        })
     }
-  }
+}
 
 const burgerMenu = new BurgerMenu();
 const slider = new Slider();

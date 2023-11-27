@@ -38,7 +38,7 @@
         }
     }
 
-    &__item-cart{
+    &__item-cart {
         border-radius: 29.938px;
         background: rgba(129, 129, 139, 0.30);
         padding: 5px 10px;
@@ -362,25 +362,28 @@
         letter-spacing: 1px;
         text-transform: uppercase;
     }
+
+    &__slider {
+        -webkit-mask: linear-gradient(90deg, transparent, #81818B 20%, #81818B 80%, transparent);
+        mask: linear-gradient(90deg, transparent, #81818B 20%, #81818B 80%, transparent);
+    }
+
+    &__swiper-wrapper {
+        transition-timing-function: linear;
+    }
+
+
+    &__swiper-slide {
+        width: auto;
+    }
 }
 
 .swiper {
     width: 100%;
     height: 100%;
 
-    &__inner {
-        -webkit-mask: linear-gradient(90deg, transparent, #81818B 20%, #81818B 80%, transparent);
-        mask: linear-gradient(90deg, transparent, #81818B 20%, #81818B 80%, transparent);
-    }
 }
 
-.swiper-wrapper {
-    transition-timing-function: linear;
-}
-
-.swiper-slide {
-    width: auto;
-}
 
 .services {
 
@@ -543,7 +546,7 @@
         position: relative;
         display: flex;
 
-        
+
     }
 
     &__dot {
@@ -651,7 +654,7 @@
 
     &__info {}
 
-    &__items {
+    &__swiper {
         opacity: 0;
         transition: 2s;
 
@@ -659,13 +662,20 @@
             opacity: 1;
         }
     }
+
+
 }
 
 .comments-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 48px;
 
+    .swiper-slide {
+        height: auto;
+        max-width: 394px;
+    }
+    
+    &.swiper-wrapper {
+        transition-timing-function: linear;
+    }
 
     &__item {
         border-radius: 30px;
@@ -675,11 +685,7 @@
         flex-direction: column;
         min-height: 100%;
         transition: .5s ease-in-out;
-
-
-        &:hover {
-            transform: scale(1.1);
-        }
+        box-sizing: border-box;
     }
 
     &__cart {
@@ -725,7 +731,7 @@
 .header-section {
 
     &__wrap {
-        margin-bottom: 64px;
+        margin-bottom: 100px;
         display: flex;
         justify-content: space-between;
         gap: 20px;
@@ -793,6 +799,7 @@
 
     &__photo {
         position: relative;
+        width: 100%;
 
         img {
             max-width: 100%;
@@ -858,7 +865,7 @@
     }
 
     &__info {
-        width: 348px;
+        max-width: 348px;
         text-align: center;
     }
 
