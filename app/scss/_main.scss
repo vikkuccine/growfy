@@ -1126,8 +1126,11 @@
         padding: 14.5px 32.8px 14.5px 33px;
         color: #999;
         font-weight: 400;
-        width: 100%;
+        width: 40%;
     }
 
-    &__btn {}
+    &__btn {
+        width: 34%;
+        min-width: 136px;
+    }
 }
