@@ -3,7 +3,7 @@ HTML Template "Growfy"
 Tehnologis which was used to do this project:
 - HTML
 - SCSS
-- KeyFrames
+- CSS Animations
 - JS
 - Gulp
 
