@@ -126,7 +126,6 @@
     }
 
     .menu {
-        display: block;
         position: fixed;
         top: 0;
         left: 0;
@@ -137,6 +136,10 @@
         transform: translateX(-100%);
         transition: transform 0.5s;
         z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
         &__list-link {
             color: #fff;
@@ -156,10 +159,7 @@
 
     .menu--open {
         transform: translateX(0);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+
 
         .menu__cart {
             display: block;
