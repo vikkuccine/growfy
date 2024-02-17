@@ -1,4 +1,4 @@
-HTML Template "Growfy"
+Adaptive HTML Template "Growfy"
 
 Tehnologis which was used to do this project:
 - HTML
