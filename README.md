@@ -10,8 +10,8 @@ Tehnologis which was used to do this project:
 Libraries:
 - Swiper
 
-[**Demo**](https://vikkuccine.saenq.space/growfy/)
+[**Demo**](https://vikario.space/growfy/)
 
 <p align='center'>
-    <img src='https://vikkuccine.saenq.space/growfy/preview.jpg' width='100%'>
+    <img src='https://vikario.space/growfy/preview.jpg' width='100%'>
 </p>
